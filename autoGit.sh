@@ -25,7 +25,7 @@ git_config() {
     if [ ! -n "$username" ]; then
         echo "没有用户名"
         username="autoShell"
-        git config user.name "$username"
+        git config user.name $username
         echo "设置用户为$username"
     else
         : #占位
@@ -37,7 +37,7 @@ git_config() {
     if [ ! -n "$useremail" ]; then
         echo "没有设置email"
         useremail="hellohfy@gmail.com"
-        git config user.name $≈
+        git config user.email $useremail 
         echo "设置email为$useremail"
     else
         : #占位
