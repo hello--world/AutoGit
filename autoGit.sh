@@ -18,14 +18,15 @@ git_status () {
 }
 # 配置
 git_config() {
-    git_user="user.name"
+
     username="`git config --get \"user.name\"`"
     if [[ -n $username ]]; then
         #statements
         echo "?"
     else
-        echo $username
+        :
     fi
+        echo $username
 
     username="autoShell"
     git config user.name $username
