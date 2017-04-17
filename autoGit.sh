@@ -20,22 +20,30 @@ git_status () {
 git_config() {
 
     username="`git config --get user.name`"
+    # 判断字符串是否为空
+    # 判断有无用户名
     if [ ! -n "$username" ]; then
         echo "没有用户名"
-        : #占位
+        username="autoShell"
+        git config user.name $username
+        echo "设置用户为$username"
     else
         : #占位
     fi
     echo "用户名--->$username"
+  
+    useremail="`git config --get user.email`"
+# 判断有无用户名
+    if [ ! -n "$useremail" ]; then
+        echo "没有设置email"
+        useremail="hellohfy@gmail.com"
+        git config user.name $≈
+        echo "设置email为$useremail"
+    else
+        : #占位
+    fi
+    echo "email--->$useremail"
 
-    username="autoShell"
-    git config user.name $username
-    echo "设置用户为$username"
-    useremail="hellohfy@gmail.com"
-    # 暂时用这个，后面改为取参数
-    git config user.email $useremail
-
-   
 }
 
 git_commit() {
