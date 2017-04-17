@@ -1,9 +1,14 @@
 #!/bin/bash
+# 脚本学习
 
+# 按顺序执行，函数需要调用才执行
+
+# 状态
 git_status () {
     # echo `git status`
     status="`git status`"
     echo $status
+    # 函数只能返回数字
     # if [[ $status != "" ]]; then
     #     return "ss"
     # fi
@@ -11,6 +16,20 @@ git_status () {
     echo "我叫什么名？"
 
 }
+# 配置
+git_config() {
+
+    echo `git config user.name "autoShell"`
+    # 暂时用这个，后面改为取can
+    echo `git config user.email "hellohfy@gmail.com"`
+}
+
+git_commit() {
+
+    echo "."
+}
+
+
 # git_status
 
 # echo "文件名--->$0"
@@ -21,6 +40,7 @@ if [[ -d "$1" ]]; then
 # 如果存在.git目录
 elif [[ -d "`pwd`/.git" ]]; then
 
+    git_config
     echo "当前目录--->`pwd`"
 #    echo `git log`
     # git_status
@@ -47,6 +67,7 @@ else
     then
 #result=`git init`
     echo `git init`
+    git_config
     echo `git checkout -b master`
     echo `git add .`
     echo `git commit -m "脚本初始化git并提交项目"`
