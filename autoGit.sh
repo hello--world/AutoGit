@@ -1,5 +1,18 @@
 #!/bin/bash
 
+git_status () {
+    # echo `git status`
+    status="`git status`"
+    echo $status
+    # if [[ $status != "" ]]; then
+    #     return "ss"
+    # fi
+    # return "d"
+    unset echo "我叫什么名？"
+
+}
+# git_status
+
 # echo "文件名--->$0"
 # echo "参数1--->$1"
 # 如果没有输入参数
@@ -10,7 +23,13 @@ elif [[ -d "`pwd`/.git" ]]; then
 
     echo "当前目录--->`pwd`"
 #    echo `git log`
-
+    # git_status
+    hfy=$(git_status)
+    echo "-->$hfy--?"
+    echo `git add .`
+    message="自动提交：`date +%Y%m%d`"
+    echo $message
+    echo `git commit -m ${message}`
 
 else
 # echo "参数输入错误~~~~"
@@ -30,9 +49,11 @@ else
     echo `git init`
     echo `git checkout -b master`
     echo `git add .`
-    echo `git commit -m "提交项目"`
+    echo `git commit -m "脚本初始化git并提交项目"`
     fi
 #    echo $input
 #    done
 
 fi
+
+
