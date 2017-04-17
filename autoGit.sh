@@ -25,7 +25,7 @@ git_config() {
     if [ ! -n "$username" ]; then
         echo "没有用户名"
         username="autoShell"
-        git config user.name $username
+        git config user.name "$username"
         echo "设置用户为$username"
     else
         : #占位
