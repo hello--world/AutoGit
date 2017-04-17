@@ -19,9 +19,20 @@ git_status () {
 # 配置
 git_config() {
 
-    echo `git config user.name "autoShell"`
-    # 暂时用这个，后面改为取can
-    echo `git config user.email "hellohfy@gmail.com"`
+    username="`git config --git user.name`"
+    if [[ -n $username ]]; then
+        #statements
+        echo "?"
+    else
+        echo $username
+    fi
+
+    username="autoShell"
+    git config user.name $username
+    echo "设置用户为$username"
+    useremail="hellohfy@gmail.com"
+    # 暂时用这个，后面改为取参数
+    git config user.email $useremail
 }
 
 git_commit() {
@@ -29,9 +40,7 @@ git_commit() {
     echo "."
 }
 
-
 # git_status
-
 # echo "文件名--->$0"
 # echo "参数1--->$1"
 # 如果没有输入参数
