@@ -22,11 +22,11 @@ git_config() {
     username="`git config --get \"user.name\"`"
     if [[ -n $username ]]; then
         #statements
-        echo "?"
+        : #占位
     else
-        :
+        : #占位
     fi
-        echo $username
+    echo "用户名--->$username"
 
     username="autoShell"
     git config user.name $username
