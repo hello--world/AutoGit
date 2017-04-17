@@ -8,7 +8,7 @@ git_status () {
     #     return "ss"
     # fi
     # return "d"
-    unset echo "我叫什么名？"
+    echo "我叫什么名？"
 
 }
 # git_status
@@ -27,7 +27,7 @@ elif [[ -d "`pwd`/.git" ]]; then
     hfy=$(git_status)
     echo "-->$hfy--?"
     echo `git add .`
-    message="自动提交：`date +%Y%m%d`"
+    message="自动提交：`date +%Y年%m月%d日`"
     echo $message
     echo `git commit -m ${message}`
 
