@@ -27,7 +27,7 @@ elif [[ -d "`pwd`/.git" ]]; then
     hfy=$(git_status)
     echo "-->$hfy--?"
     echo `git add .`
-    message="自动提交：`date +%Y年%m月%d日`"
+    message="`date +%Y年%m月%d日脚本自动提交`"
     echo $message
     echo `git commit -m ${message}`
 
