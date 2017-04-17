@@ -51,8 +51,8 @@ git_commit() {
 }
 # push
 git_push() {
-    # git remote add origin git@github.com:hello--world/AutoGit.git
-    # git push -u origin master
+    git remote add origin git@github.com:hello--world/AutoGit.git
+    git push -u origin master
     :
 }
 
