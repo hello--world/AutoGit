@@ -21,7 +21,7 @@ git_config() {
 
     username="`git config --get user.name`"
     if [[ -n $username ]]; then
-        #statements
+        echo "没有用户名"
         : #占位
     else
         : #占位
