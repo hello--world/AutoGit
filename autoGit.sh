@@ -19,7 +19,7 @@ git_status () {
 # 配置
 git_config() {
 
-    username="`git config --get \"user.name\"`"
+    username="`git config --get user.name`"
     if [[ -n $username ]]; then
         #statements
         : #占位
@@ -41,11 +41,11 @@ git_config() {
 git_commit() {
     :
 }
-
+# push
 git_push() {
-    git remote add origin git@github.com:hello--world/AutoGit.git
-    git push -u origin master
-
+    # git remote add origin git@github.com:hello--world/AutoGit.git
+    # git push -u origin master
+    :
 }
 
 # git_status
