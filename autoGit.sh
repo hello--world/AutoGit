@@ -35,13 +35,17 @@ git_config() {
     # 暂时用这个，后面改为取参数
     git config user.email $useremail
 
-    git remote add origin git@github.com:hello--world/AutoGit.git
-    git push -u origin master
+   
 }
 
 git_commit() {
+    :
+}
 
-    echo "."
+git_push() {
+    git remote add origin git@github.com:hello--world/AutoGit.git
+    git push -u origin master
+
 }
 
 # git_status
@@ -63,6 +67,7 @@ elif [[ -d "`pwd`/.git" ]]; then
     message="`date +%Y年%m月%d日%H:%M:%S脚本自动提交`"
     echo $message
     echo `git commit -m ${message}`
+    git_push
 
 else
 # echo "参数输入错误~~~~"
