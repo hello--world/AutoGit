@@ -34,6 +34,9 @@ git_config() {
     useremail="hellohfy@gmail.com"
     # 暂时用这个，后面改为取参数
     git config user.email $useremail
+
+    git remote add origin git@github.com:hello--world/AutoGit.git
+    git push -u origin master
 }
 
 git_commit() {
