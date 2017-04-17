@@ -18,8 +18,8 @@ git_status () {
 }
 # 配置
 git_config() {
-
-    username="`git config --git user.name`"
+    git_user="user.name"
+    username="`git config --git $git_user`"
     if [[ -n $username ]]; then
         #statements
         echo "?"
