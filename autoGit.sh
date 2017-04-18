@@ -1,7 +1,16 @@
 #!/bin/bash
-# 脚本学习
+# 脚本学习，复习git使用
 
 # 按顺序执行，函数需要调用才执行
+
+# 只读属性
+readonly VERSION="1.0"
+
+readonly COMMITDATE=`date +%Y年%m月%d日%H:%M:%S`
+
+readonly DEBUG=true
+
+echo "测试啊\n"
 
 # 状态
 git_status () {
@@ -45,15 +54,38 @@ git_config() {
     echo "email--->$useremail"
 
 }
-
+# 提交
 git_commit() {
+    message="$1"
+    if [ ! -n "$message" ]; then
+        message="${COMMITDATE}脚本自动提交"
+    fi
+    echo `git commit -m ${message}`
     :
 }
-# push
+# 推送
 git_push() {
-    git remote add origin git@github.com:hello--world/AutoGit.git
-    git push -u origin master
-    :
+    if !${DEBUG}; then 
+        git remote add origin git@github.com:hello--world/AutoGit.git
+        git push -u origin master
+    fi
+}
+# 添加
+git_add() {
+    echo `git add .`
+}
+# 初始化
+git_init() {
+    echo `git init`
+}
+# 检出
+git_checkout() {
+    branch=$1
+    # -z 判断字符串是否为空
+    if [ -z "branch" ]; then
+        branch="master"
+    fi
+    echo `git checkout -b ${branch}` 
 }
 
 # git_status
@@ -71,10 +103,8 @@ elif [[ -d "`pwd`/.git" ]]; then
     # git_status
     hfy=$(git_status)
     echo "-->$hfy--?"
-    echo `git add .`
-    message="`date +%Y年%m月%d日%H:%M:%S脚本自动提交`"
-    echo $message
-    echo `git commit -m ${message}`
+    git_add
+    git_commit
     git_push
 
 else
@@ -92,11 +122,12 @@ else
     if [ "$input" = "y" ]
     then
 #result=`git init`
-    echo `git init`
     git_config
-    echo `git checkout -b master`
-    echo `git add .`
-    echo `git commit -m "脚本初始化git并提交项目"`
+    git_init
+    git_checkout
+    git_add
+    git_commit "${COMMITDATE}脚本初始化git并提交项目"
+   
     fi
 #    echo $input
 #    done
