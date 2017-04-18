@@ -3,6 +3,8 @@
 
 # 按顺序执行，函数需要调用才执行
 
+set -e
+
 # 只读属性
 readonly VERSION="1.0"
 
