@@ -13,7 +13,7 @@ readonly COMMITDATE=`date +%Y年%m月%d日%H:%M:%S`
 
 readonly DEBUG=true
 
-echo "测试啊/n"
+echo "测试啊\n"
 
 # 状态
 git_status () {
