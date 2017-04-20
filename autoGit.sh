@@ -4,14 +4,15 @@
 # 按顺序执行，函数需要调用才执行
 
 set -e
-set -x
+# set -x # 显示执行过程
 
 # 只读属性
 readonly VERSION="1.0"
 
 readonly COMMITDATE=`date +%Y年%m月%d日%H:%M:%S`
 
-readonly DEBUG=true
+readonly DEBUG=false
+# readonly DEBUG=true
 
 echo "测试啊\n"
 
