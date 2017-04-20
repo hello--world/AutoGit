@@ -12,8 +12,8 @@ readonly VERSION="1.0"
 
 readonly COMMITDATE=`date +%Y_%m_%d_%H_%M_%S`
 
-readonly DEBUG=false
-# readonly DEBUG=true
+# readonly DEBUG=false
+readonly DEBUG=true
 
 echo "测试啊\n"
 
@@ -99,7 +99,11 @@ git_checkout() {
 }
 
 find_file () {
-    echo `find . -type f -size +1k>>"files.txt"`
+    files="files.txt"
+    if [ -f ${files} ]; then
+        rm ${files}
+    fi
+    echo `find . -type f -size +1k>>${files}`
 
 }
 
