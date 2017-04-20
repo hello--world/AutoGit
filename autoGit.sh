@@ -104,7 +104,7 @@ git_checkout() {
     # if [ -z "branch" ]; then
     #     branch="master"
     # fi
-    branch=${${branch}:-master}
+    branch=${$branch:-master}
     echo ${branch}
     git checkout -b ${branch}
 
