@@ -9,7 +9,7 @@ set -e
 # 只读属性
 readonly VERSION="1.0"
 
-readonly COMMITDATE=`date +%Y_%m_%d_%H:%M:%S`
+readonly COMMITDATE=`date +%Y_%m_%d_%H_%M_%S`
 
 # readonly DEBUG=false
 readonly DEBUG=true
