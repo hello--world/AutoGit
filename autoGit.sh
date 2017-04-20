@@ -73,7 +73,7 @@ git_push() {
         if [ -z "`git config remote.origin.url`" ]; then
         git remote add origin git@github.com:hello--world/AutoGit.git
         fi
-        git push -u origin master
+        echo `git push -u origin master`
     fi
 }
 # 添加
