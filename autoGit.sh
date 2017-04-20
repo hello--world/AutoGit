@@ -69,7 +69,7 @@ git_commit() {
 }
 # 推送
 git_push() {
-    if !${DEBUG}; then 
+    if ${DEBUG}; then 
         if [ -z "`git config remote.origin.url`" ]; then
         git remote add origin git@github.com:hello--world/AutoGit.git
         fi
