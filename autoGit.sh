@@ -9,7 +9,7 @@ set -e
 # 只读属性
 readonly VERSION="1.0"
 
-readonly COMMITDATE=`date +%Y年%m月%d日%H:%M:%S`
+readonly COMMITDATE=`date +%Y%m%d%H:%M:%S`
 
 # readonly DEBUG=false
 readonly DEBUG=true
@@ -73,7 +73,9 @@ git_push() {
         if [ -z "`git config remote.origin.url`" ]; then
         git remote add origin git@github.com:hello--world/AutoGit.git
         fi
-        echo `git push -u origin ${COMMITDATE}`
+        branch=${COMMITDATE}
+        git_checkout branch
+        echo `git push -u origin ${branch}`
 
     fi
 }
