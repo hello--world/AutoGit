@@ -125,6 +125,7 @@ if [[ -d "$1" ]]; then
     echo "目录存在"
 # 如果存在.git目录
 elif [[ -d "`pwd`/.git" ]]; then
+    find_file
 
     git_config
     echo "当前目录--->`pwd`"
@@ -136,7 +137,6 @@ elif [[ -d "`pwd`/.git" ]]; then
     git_commit
     git_push
 
-    find_file
 
 else
 # echo "参数输入错误~~~~"
