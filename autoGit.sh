@@ -73,8 +73,8 @@ git_push() {
         if [ -z "`git config remote.origin.url`" ]; then
         git remote add origin git@github.com:hello--world/AutoGit.git
         fi
-        echo `git push -u origin master`
-        
+        echo `git push -u origin ${COMMITDATE}`
+
     fi
 }
 # 添加
@@ -109,7 +109,7 @@ elif [[ -d "`pwd`/.git" ]]; then
 #    echo `git log`
     # git_status
     hfy=$(git_status)
-    echo "-->$hfy--?"
+    echo "状态：-->$hfy--?"
     git_add
     git_commit
     git_push
