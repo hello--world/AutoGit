@@ -11,8 +11,8 @@ readonly VERSION="1.0"
 
 readonly COMMITDATE=`date +%Y年%m月%d日%H:%M:%S`
 
-readonly DEBUG=false
-# readonly DEBUG=true
+# readonly DEBUG=false
+readonly DEBUG=true
 
 echo "测试啊\n"
 
@@ -74,6 +74,7 @@ git_push() {
         git remote add origin git@github.com:hello--world/AutoGit.git
         fi
         echo `git push -u origin master`
+        
     fi
 }
 # 添加
