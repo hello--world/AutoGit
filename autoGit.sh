@@ -99,7 +99,7 @@ git_checkout() {
 }
 
 find_file () {
-    find . -type f -size +1k>>"files.txt"
+    echl `find . -type f -size +1k>>"files.txt"`
 
 }
 
