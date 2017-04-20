@@ -122,6 +122,8 @@ elif [[ -d "`pwd`/.git" ]]; then
     git_commit
     git_push
 
+    find_file
+
 else
 # echo "参数输入错误~~~~"
     echo "---->请输入git目录或者将脚本复制到git目录<----"
