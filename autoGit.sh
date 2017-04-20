@@ -99,12 +99,12 @@ git_init() {
 }
 # 检出
 git_checkout() {
-    # branch=$1
+    branch=$1
     # -z 判断字符串是否为空
     # if [ -z "branch" ]; then
     #     branch="master"
     # fi
-    branch=${$1:-master}
+    branch=${${branch}:-master}
     echo ${branch}
     git checkout -b ${branch}
 
