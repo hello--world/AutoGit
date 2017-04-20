@@ -2,6 +2,7 @@
 # 脚本学习，复习git使用
 
 # 按顺序执行，函数需要调用才执行
+# 测试查找大文件，删除历史
 
 set -e
 # set -x # 显示执行过程
@@ -11,8 +12,8 @@ readonly VERSION="1.0"
 
 readonly COMMITDATE=`date +%Y_%m_%d_%H_%M_%S`
 
-# readonly DEBUG=false
-readonly DEBUG=true
+readonly DEBUG=false
+# readonly DEBUG=true
 
 echo "测试啊\n"
 
@@ -95,6 +96,11 @@ git_checkout() {
         branch="master"
     fi
     echo `git checkout -b ${branch}` 
+}
+
+find_file () {
+    find . -type f -size +1k>>"files.txt"
+
 }
 
 # git_status
