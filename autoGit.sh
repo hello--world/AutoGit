@@ -74,7 +74,7 @@ git_push() {
         git remote add origin git@github.com:hello--world/AutoGit.git
         fi
         branch=${COMMITDATE}
-        git_checkout branch
+        git_checkout ${branch}
         echo `git push -u origin ${branch}`
 
     fi
