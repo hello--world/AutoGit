@@ -4,6 +4,14 @@
 # 按顺序执行，函数需要调用才执行
 # 测试查找大文件，删除历史
 
+#${var} 变量本来的值
+#${var:-word}    如果变量 var 为空或已被删除(unset)，那么返回 word，但不改变 var 的值。
+#${var:=word}    如果变量 var 为空或已被删除(unset)，那么返回 word，并将 var 的值设置为 word。
+#${var:?message} 如果变量 var 为空或已被删除(unset)，那么将消息 message 送到标准错误输出，可以用来检测变量 var 是否可以被正常赋值。
+#若此替换出现在Shell脚本中，那么脚本将停止运行。
+#${var:+word}    如果变量 var 被定义，那么返回 word，但不改变 var 的值。
+
+#
 set -e
 # set -x # 显示执行过程
 
@@ -71,6 +79,7 @@ git_commit() {
 # 推送
 git_push() {
     if ${DEBUG}; then 
+        # 判断是否设置url
         if [ -z "`git config remote.origin.url`" ]; then
         git remote add origin git@github.com:hello--world/AutoGit.git
         fi
@@ -82,20 +91,23 @@ git_push() {
 }
 # 添加
 git_add() {
-    echo `git add .`
+    git add .
 }
 # 初始化
 git_init() {
-    echo `git init`
+    git init
 }
 # 检出
 git_checkout() {
-    branch=$1
+    # branch=$1
     # -z 判断字符串是否为空
-    if [ -z "branch" ]; then
-        branch="master"
-    fi
-    echo `git checkout -b ${branch}` 
+    # if [ -z "branch" ]; then
+    #     branch="master"
+    # fi
+    branch=${$1:-master}
+    echo ${branch}
+    git checkout -b ${branch}
+
 }
 
 find_file () {
@@ -103,7 +115,7 @@ find_file () {
     if [ -f ${files} ]; then
         rm ${files}
     fi
-    echo `find . -type f -size +1k>>${files}`
+    find . -type f -size +1k>>${files} # 查找当前大于
 
 }
 
