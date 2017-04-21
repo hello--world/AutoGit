@@ -111,7 +111,7 @@ git_checkout() {
 find_file () {
 
     filesPath="`pwd ~`/files.txt"
-    echo ${filesPath}
+    echo "filesPath-->${filesPath}"
     if [ -f ${filesPath} ]; then
         rm ${filesPath}
     fi
