@@ -31,6 +31,18 @@ readonly DEBUG=true
 
 echo "测试啊\n"
 
+# 删除垃圾文件
+delrubbishfile () {
+    # .DS_Store
+    for filePath in `find . -name .DS_Store`; do
+        echo "删除文件-->${filePath}"
+        rm -rf ${filePath}
+    done
+}
+
+
+delrubbishfile
+
 # 状态
 git_status () {
     # echo `git status`
