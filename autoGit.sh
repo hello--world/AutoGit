@@ -109,11 +109,13 @@ git_checkout() {
 }
 
 find_file () {
-    files="files.txt"
-    if [ -f ${files} ]; then
-        rm ${files}
+
+    filesPath="`pwd ~`/files.txt"
+    echo ${filesPath}
+    if [ -f ${filesPath} ]; then
+        rm ${filesPath}
     fi
-    find . -type f -size +1k>>${files} # 查找当前大于
+    find . -type f -size +1k>>${filesPath} # 查找当前大于
 
 }
 
