@@ -29,10 +29,11 @@ readonly COMMITDATE=`date +%Y_%m_%d_%H_%M_%S`
 # readonly DEBUG=false
 readonly DEBUG=true
 
+# delrubbishfile ()
 echo "测试啊\n"
 
 # 删除垃圾文件
-delrubbishfile () {
+delrubbishfile () { 
     # .DS_Store
     for filePath in `find . -name .DS_Store`; do
         echo "删除文件-->${filePath}"
@@ -40,7 +41,7 @@ delrubbishfile () {
     done
 }
 
-
+# 写在delrubbishfile () { } 的后面
 delrubbishfile
 
 # 状态
