@@ -8,7 +8,7 @@ PATHIDR=$1
 echo $PATHIDR
 
 if [[ -d  ${PATHIDR} && ! -z "${PATHIDR}" ]]; then
-
+	# 查找路径，将内容使用awk命令进行处理 FS="/" 分隔符  $NF 最后一个  $1第一个
 	find ${PATHIDR} -name "*.framework"|awk 'BEGIN{ FS="/" } { print $NF }'|awk 'BEGIN{ FS="." } { print $1 }'>>${2:-frameworks_name.txt}
 
 else
