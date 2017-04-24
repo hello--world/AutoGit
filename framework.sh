@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# 将framework的名字和头文件名字提取出来，导出文件
 # FRAMEWORK="FRAMEWORK.TXT"
 
 # PATH=$1 导致命令找不到。。。
