@@ -1,0 +1,10 @@
+JSContext
+JSExport
+JSJavaScriptCoreFinder
+JSManagedValue
+JSObjCClassInfo
+JSVMWrapperCache
+JSValue
+JSVirtualMachine
+JSWTFMainThreadCaller
+JSWrapperMap

@@ -1,0 +1,12 @@
+RPDaemonProxy
+RPFlatVideoOverlayButton
+RPHighFidelityVideoOverlayButton
+RPPreviewViewController
+RPScreenRecorder
+RPStoreInfo
+RPStoreManager
+RPVideoEditorExtensionHostContext
+RPVideoEditorHostViewController
+RPVideoEditorViewController
+RPYouTubeActivity
+RPYouTubeActivityProgressOverlay

@@ -1,0 +1,17 @@
+MCAdvertiserAssistant
+MCBrowserViewController
+MCNearbyDiscoveryPeer
+MCNearbyDiscoveryPeerConnection
+MCNearbyPeerTableViewCell
+MCNearbyPeerTableViewHeader
+MCNearbyServiceAdvertiser
+MCNearbyServiceBrowser
+MCNearbyServiceUtils
+MCPeerID
+MCPeerIDInternal
+MCResourceDownloader
+MCResourceProgressObserver
+MCSession
+MCSessionPeerConnectionData
+MCSessionPeerState
+MCSessionStream

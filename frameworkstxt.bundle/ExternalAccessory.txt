@@ -1,0 +1,10 @@
+EAAccessory
+EAAccessoryInternal
+EAAccessoryManager
+EABluetoothAccessoryPicker
+EAInputStream
+EAOutputStream
+EASession
+EAWiFiUnconfiguredAccessory
+EAWiFiUnconfiguredAccessoryBrowser
+WACLogging

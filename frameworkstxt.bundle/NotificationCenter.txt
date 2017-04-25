@@ -1,0 +1,16 @@
+NCDataSourceManager
+NCSnippetDataSource
+NCSnippetDataSourceManager
+NCSnippetDatum
+NCWidgetController
+NCWidgetDataSource
+NCWidgetDataSourceManager
+NCWidgetDatum
+NCWidgetVisibilityManager
+_NCConcreteDataSource
+_NCWidgetControllerRequestLimiter
+_NCWidgetExtensionContext
+_NCWidgetViewController
+_NCWidgetViewControllerAnimator
+_NCWidgetViewControllerTransitionContext
+_NCWidgetViewControllerView

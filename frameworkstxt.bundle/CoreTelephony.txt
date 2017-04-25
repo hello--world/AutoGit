@@ -1,0 +1,16 @@
+CTAsciiAddress
+CTCall
+CTCallCenter
+CTCarrier
+CTCellularData
+CTEmailAddress
+CTMessage
+CTMessageCenter
+CTMessagePart
+CTMessageStatus
+CTMmsEncoder
+CTPhoneNumber
+CTRadioAccessTechnology
+CTSubscriber
+CTSubscriberInfo
+CTTelephonyNetworkInfo

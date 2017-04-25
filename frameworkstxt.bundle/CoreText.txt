@@ -1,0 +1,10 @@
+CTFeatureSetting
+CTGlyphStorageInterface
+FontAssetDownloadManager
+NSCTRubyAnnotation
+NSRubyAnnotation
+_CTFontFallbacksArray
+_CTGCommonCache
+_CTGlyphStorage
+_CTMutableGlyphStorage
+_CTNativeGlyphStorage

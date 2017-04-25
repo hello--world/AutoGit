@@ -1,0 +1,13 @@
+HKActivityRingView
+HKAnimatableObject
+HKAnimatableObjectPropertyAnimation
+HKCGPointPropertyAnimation
+HKFloatPropertyAnimation
+HKGLView
+HKMetricColors
+HKRingGroupController
+HKRingsView
+_HKAnimatableProperty
+_HKIcon
+_HKRing
+_HKShapeView
